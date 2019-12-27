@@ -225,7 +225,7 @@ $ cat >/etc/cni/net.d/10-mynet.conf <<EOF
 EOF
 ```
 
-## Start moving towards containerd (WIP)
+## Playing with the Dockerfile and containerd (WIP)
 assumes faasweb is the image name in docker.
 
 ```
