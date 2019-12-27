@@ -225,6 +225,17 @@ $ cat >/etc/cni/net.d/10-mynet.conf <<EOF
 EOF
 ```
 
+## Start moving towards containerd (WIP)
+assumes faasweb is the image name in docker.
+
+```
+docker save -o /tmp/faasweb.tar faasweb
+ctr i import /tmp/faasweb.tar
+ctr i ls
+ctr images ls
+ctr run docker.io/library/faasweb:latest v1 --rm
+```
+
 ## Links
 
 * [Detailed explanation on netns](https://pierrchen.blogspot.com/2018/05/understand-container-6-hooks-and-network.html)
