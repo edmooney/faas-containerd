@@ -26,7 +26,7 @@ RUN gofmt -l -d $(find . -type f -name '*.go' -not -path "./vendor/*") \
         -X github.com/alexellis/faas-containerd/pkg.Version=${VERSION}" \
         -a -installsuffix cgo -o faas-containerd .
 
-FROM alpine:3.11 as ship
+FROM alpine:3.22.2 as ship
 
 LABEL org.label-schema.license="MIT" \
       org.label-schema.vcs-url="https://github.com/alexellis/faas-containerd" \
